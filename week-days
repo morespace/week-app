@@ -1,0 +1,43 @@
+// Simple app which can get 1 arg as a number from [1-7] and prints Day
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+            System.out.println("Enter a number from 1 to 7");
+            String day;
+            int number = new Scanner(System.in).nextInt();
+            switch (number) {
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+                case 7:
+                    day = "Sunday";
+                    break;
+                default:
+                    day = "There is no such day in a week";
+            }
+            System.out.println(day);
+        } catch (Exception exception) {
+            System.out.println("Invalid data");
+        }
+    }
+}
